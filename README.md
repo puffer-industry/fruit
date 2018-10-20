@@ -1,2 +1,2 @@
 # fruit
-The fruit html game
+The fruit html5 game

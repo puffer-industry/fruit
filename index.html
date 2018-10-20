@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fruit</title>
+    <style>
+        * {margin: 0;padding: 0;}
+        body, #game {position: fixed;top:0;left:0;height:100%;width:100%;}
+    </style>
+    <script src="./src/app.js"></script>
+    <script src="./src/loader.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- load canvas here -->
+    </div>
+</body>
+
+<script>
+    window.app = new App(document.getElementById('app'));
+
+    var imageLoader = new ImageLoader({
+        'apple': './store/images/apple.png',
+        'apple-1': './store/images/apple-1.png',
+        'background': './store/images/background.jpg',
+        'boom': './store/images/boom.png',
+        'developing': './store/images/developing.png',
+        'flash': './store/images/flash.png',
+        'game-over': './store/images/game-over.png',
+    });
+    imageLoader.load().then(images => {
+        console.log(images);
+    });
+</script>
+</html>
